@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #1E1E1E;
+            
+        }
+        header{
+            background-color: #10B981;
+            width: 100%;
+            padding: 16px 24px;
+        }
+        h2{
+            padding: 3px;
+            color: #064E3B;
+            align-items: center;
+        }
+        h3{
+            text-align: center;
+            align-self: center;
+            padding: 3px;
+            color:#10B981
+            
+        }
+        h4{
+            padding: 3px;
+            color: #10B981;
+        }
+        .cadastro{
+            text-align: center;
+            align-items: center;
+        }
+        textarea {
+        width: 48%;        
+        height: 30px;      
+        padding: 10px 12px;
+        box-sizing: border-box;
+}
+        #tex2{
+            height: 50px;
+            width: 60%;
+        }
+        .avatar-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+#preview-foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;       /* Deixa a foto redonda */
+  object-fit: cover;        /* Corta sem achatar ou esticar a imagem */
+  border: 3px solid #10B981;
+  background-color: #27272A;
+}
+
+.btn-foto {
+  background-color: #10B981;
+  color: #1E1E1E;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-foto:hover {
+  background-color: #059669;
+}
+#botao{
+    border-radius: 6px;
+    height: 24px;
+    width: 25%;
+    background-color: #10B981;
+}
+    </style>
+</head>
+<body>
+    <header>
+        
+    <h2>bem vindo ao site</h2>
+    </header>
+    <br>
+    <h3>faça o cadastro !</h3>
+    <br>
+    <form id="form-cadastro" action="/api/cadastro" method="POST" enctype="multipart/form-data">
+    <div class="avatar-upload">
+    <img id="preview-foto" src="https://via.placeholder.com/120" alt="Foto de perfil">
+  
+    <label for="input-foto" class="btn-foto">Escolher foto</label>
+    <input type="file" name="foto" id="input-foto" accept="image/*" hidden>
+</div>
+    <br>
+    <div class="cadastro">
+    <h4>nome</h4>
+    <textarea id="tex3" name="nome"></textarea>
+    <h4>email</h4>
+
+    <textarea id="tex1" name="email"></textarea>
+    <h4>qual a sua waifu?</h4>
+    <textarea id="tex4" name="waifu"></textarea>
+    <h4>qual seu jogo favorito?</h4>
+    <textarea id="text6" name="jogo"></textarea>
+    <h4>descrição</h4>
+    <textarea id="tex2" name="textinho"></textarea>
+    <br>
+    <button type="submit" class="enviar" id="botao">enviar cadastro</button>
+    </form>
+    </div>
+</body>
